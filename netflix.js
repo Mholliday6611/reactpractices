@@ -52,9 +52,12 @@ var emulateMarathon = function(list){
 	else{
 		currentEpisode = list[0]
 
+
 		console.log("\n You are currently watching " + currentEpisode.title)
 
 		getNextEpisodeInPlaylist(removeFromPlaylist(list, currentEpisode))
+
+		console.log("Episodes remaining " + (list.length-1))
 
 		emulateMarathon(removeFromPlaylist(list, currentEpisode))
 	}
