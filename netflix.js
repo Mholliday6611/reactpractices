@@ -12,7 +12,12 @@ const episodes = [
   { id: 's06e09', title: 'Public Relations' },
 ];
 
+const spongbob = [
+  { id: 's01e01', title: 'Bikini Botom' },
+  { id: 's01e02', title: 'Patrick' },
+]
 
+const wannaAdd = { id: 's01e04', title: 'Sandy' }
 const finaleEpisode = { id: 's06e10', title: 'Bringing Up Buster' };
 
 
@@ -22,6 +27,8 @@ const addToPlaylist = function(list,episodes){
 }
 // console.log(addToPlaylist)
 
+var newList = addToPlaylist(spongbob,wannaAdd)
+// console.log(newList)
 // You may want to add a function which takes away the current episode you were just watching and returns the new object consisting only of the 
 // rest of the episodes which you have not viewed yet. 
 
@@ -29,7 +36,7 @@ const removeFromPlaylist = function(list,current){
 	return list.filter(function(episode){return episode != current})
 }
 
-// console.log(removeFromPlaylist(addToPlaylist,episodes[0]))
+// console.log(removeFromPlaylist(episodes,episodes[5]))
 
 // You might want to create a function which shows the viewer the next episode. 
 // ** this would be a useful function after you have filtered or sliced the previous episode object out of the array ** 
